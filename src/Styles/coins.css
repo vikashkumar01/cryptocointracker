@@ -1,0 +1,105 @@
+.coinContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.headingContainer>h1{
+    color: crimson;
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.coindetailsContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.coindetails{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 0 0 10px rgb(80, 80, 80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    transition: all 0.2s;
+
+}
+
+.coindetails:hover{
+    scale: 1.1;
+}
+
+.coindetails>img{
+    width: 50px;
+    height: 50px;
+}
+
+.coindetails>h3{
+    color: rgb(62, 62, 62);
+    text-align: center;
+}
+
+.radio{
+    width: 80%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.radio>div{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio>div>label{
+    margin-left: 5px;
+}
+
+.btnarray{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    margin: 10px;
+
+}
+
+.btnarray::-webkit-scrollbar{
+    display: none;
+}
+
+.btnarray>button{
+    min-width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: black;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.btnarray>button:hover{
+    scale: 1.1;
+}
