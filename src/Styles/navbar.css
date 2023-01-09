@@ -95,5 +95,19 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+
+    .header{
+       display: none;
+    }
+
+    .home>img{
+        width: 200px;
+        height: 200px;
+    }
+    
+  }
+
+
 
 
