@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Coins = () => {
@@ -9,8 +9,6 @@ const Coins = () => {
   const [coinarray, setCoinsArray] = useState([])
   const [currency, setCurrency] = useState('inr')
   const [page, setPage] = useState(1);
-
-  console.log(page)
 
   const currencysymbol = currency === 'inr' ? '₹' : currency === 'eur' ? '€' : '$'
   const btns = new Array(132).fill(1)
@@ -25,6 +23,8 @@ const Coins = () => {
 
     fetchData()
   }, [currency, page])
+
+  console.log(coinarray)
 
   return (
     <div className='coinContainer'>
@@ -54,19 +54,30 @@ const Coins = () => {
         </div>
       </div>
       <div className='coindetailsContainer'>
-        {
-          coinarray.map((x, i) => (
-            <Link to={`/coin/${x.id}`} key={i}>
-              <div className='coindetails' >
-                <h2>{x.market_cap_rank}</h2>
-                <img src={x.image} alt="" />
-                <h3>{currencysymbol} {x.current_price}</h3>
-                <h3>{x.name}</h3>
-              </div>
-            </Link>
-
-          ))
-        }
+        <table>
+          <thead>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Currency</th>
+            <th>Total_Supply</th>
+            <th>Total_Volume</th>
+          </thead>
+          <tbody>
+            {
+              coinarray.map((x, i) => (
+                <Link to={`/coin/${x.id}`} key={i}>
+                  <tr className='coindetails' >
+                    <td><h2>{x.market_cap_rank}</h2></td>
+                    <td><img src={x.image} alt="" /><h3>{x.name}</h3></td>
+                    <td><h3>{currencysymbol} {x.current_price}</h3></td>
+                    <td><h3>{x.total_supply}</h3></td>
+                    <td><h3>{x.total_volume} {x.current_price}</h3></td>
+                  </tr>
+                </Link>
+              ))
+            }
+          </tbody>
+        </table>
       </div>
       <div className='btnarray'>
         {

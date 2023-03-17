@@ -22,8 +22,8 @@ const Chart = ({ arr = [], currency, days }) => {
         datasets: [
             {
                 label: `Prices in ${currency}`,
-                data: prices, borderColor: "rgb(225,99,132)",
-                backgroundColor: "rgb(225,99,132,0.5)",
+                data: prices, borderColor: "gray",
+                backgroundColor: "white",
             }
         ],
     }
@@ -32,6 +32,7 @@ const Chart = ({ arr = [], currency, days }) => {
         <Line
             width="50%"
             options={{
+                responsive: true,
                 maintainAspectRatio: false
             }}
             data={data}

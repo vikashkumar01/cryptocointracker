@@ -16,44 +16,83 @@
 }
 
 .coindetailsContainer{
-    width: 100%;
+    width: 80%;
     min-height: 100vh;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+    margin: 10px;
+    overflow-x:auto
 }
 
-.coindetails{
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    margin: 10px;
-    box-shadow: 0 0 10px rgb(80, 80, 80);
+.coindetailsContainer>table{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.coindetailsContainer>table>thead{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    border-top: 1px solid rgb(198, 198, 198);
+}
+
+.coindetailsContainer>table>thead>th{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.coindetailsContainer>table>tbody{
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.coindetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid rgb(206, 206, 206);
     transition: all 0.2s;
 
 }
 
+.coindetails>td{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+    
+}
+
+
 .coindetails:hover{
-    scale: 1.1;
+    background-color: rgb(245, 245, 245);
 }
 
-.coindetails>img{
-    width: 50px;
-    height: 50px;
+.coindetails>td>img{
+    width: 30px;
+    height: 30px;
 }
 
-.coindetails>h3{
+.coindetails>td>h3{
     color: rgb(62, 62, 62);
     text-align: center;
+}
+
+.coindetails>:nth-child(2)>h3{
+  margin-left: 10px;
 }
 
 .radio{

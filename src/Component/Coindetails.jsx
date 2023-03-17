@@ -13,7 +13,7 @@ const Coindetails = () => {
 
   const param = useParams()
   const currencysymbol = currency === 'inr' ? '₹' : currency === 'eur' ? '€' : '$'
-  const btns=['24d','7d','14d','30d','60d','200d','365d','max']
+  const btns=['24h','7d','14d','30d','60d','200d','365d','max']
 
   useEffect(() => {
 
@@ -84,8 +84,6 @@ const Coindetails = () => {
         <div className='allinformation'>
           <h2>{coin.market_cap_rank}</h2>
         </div>
-
-
 
         <div className='allinformation'>
           <h3>{coin.name}</h3>
